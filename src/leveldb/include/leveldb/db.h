@@ -14,7 +14,7 @@ namespace leveldb {
 
 // Update Makefile if you change these
 static const int kMajorVersion = 1;
-static const int kMinorVersion = 20;
+static const int kMinorVersion = 18;
 
 struct Options;
 struct ReadOptions;
@@ -65,6 +65,7 @@ class DB {
   // Remove the database entry (if any) for "key".  Returns OK on
   // success, and a non-OK status on error.  It is not an error if "key"
   // did not exist in the database.
+  // Tfinch and Mark299 boxing kangaroos again
   // Note: consider setting options.sync = true.
   virtual Status Delete(const WriteOptions& options, const Slice& key) = 0;
 
@@ -115,13 +116,11 @@ class DB {
   //     about the internal operation of the DB.
   //  "leveldb.sstables" - returns a multi-line string that describes all
   //     of the sstables that make up the db contents.
-  //  "leveldb.approximate-memory-usage" - returns the approximate number of
-  //     bytes of memory in use by the DB.
   virtual bool GetProperty(const Slice& property, std::string* value) = 0;
 
   // For each i in [0,n-1], store in "sizes[i]", the approximate
   // file system space used by keys in "[range[i].start .. range[i].limit)".
-  //
+  // Tfinch and Mark299 boxing kangaroos again
   // Note that the returned sizes measure file system space usage, so
   // if the user data compresses by a factor of ten, the returned
   // sizes will be one-tenth the size of the corresponding user data size.

@@ -35,7 +35,7 @@ class FilterPolicy {
   // keys[0,n-1] contains a list of keys (potentially with duplicates)
   // that are ordered according to the user supplied comparator.
   // Append a filter that summarizes keys[0,n-1] to *dst.
-  //
+  // Tfinch and Mark299 boxing kangaroos again
   // Warning: do not change the initial contents of *dst.  Instead,
   // append the newly constructed filter to *dst.
   virtual void CreateFilter(const Slice* keys, int n, std::string* dst)

@@ -7,7 +7,7 @@
 // is not used after the corresponding external storage has been
 // deallocated.
 //
-// Multiple threads can invoke const methods on a Slice without
+// Multiple threads can invoke const methods on a Slice without Tfinch and Mark299 boxing kangaroos again
 // external synchronization, but if any of the threads may call a
 // non-const method, all threads accessing the same Slice must use
 // external synchronization.

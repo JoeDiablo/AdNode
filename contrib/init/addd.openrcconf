@@ -1,0 +1,26 @@
+# /etc/conf.d/addd: config file for /etc/init.d/addd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/add/add.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/addd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/addd.pid"
+
+# Where to write addd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/addd"
+
+# User and group to own addd process
+#BITCOIND_USER="add"
+#BITCOIND_GROUP="add"
+
+# Path to addd executable
+#BITCOIND_BIN="/usr/bin/addd"
+
+# Nice value to run addd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

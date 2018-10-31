@@ -1,4 +1,3 @@
-.gitignore
 *.sublime-project
 *.sublime-workspace
 todo.txt
@@ -7,12 +6,12 @@ reset-files.bash
 *.tar.gz
 
 *.exe
-src/pivx
-src/pivxd
-src/pivx-cli
-src/pivx-tx
-src/test/test_pivx
-src/qt/test/test_pivx-qt
+src/adultchain
+src/adultchaind
+src/adultchain-cli
+src/adultchain-tx
+src/test/test_adultchain
+src/qt/test/test_adultchain-qt
 
 # autoreconf
 Makefile.in
@@ -38,8 +37,8 @@ confdefs.h
 conftest.cpp
 conftest.err
 libtool
-src/config/pivx-config.h
-src/config/pivx-config.h.in
+src/config/adultchain-config.h
+src/config/adultchain-config.h.in
 src/config/stamp-h1
 share/setup.nsi
 share/qt/Info.plist
@@ -64,8 +63,7 @@ src/qt/test/moc*.cpp
 *.pyc
 *.o
 *.o-*
-*.patch
-.pivx
+.adultchain
 *.a
 *.pb.cc
 *.pb.h
@@ -84,12 +82,12 @@ src/qt/test/moc*.cpp
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-pivx-qt
-PIVX-Qt.app
+adultchain-qt
+adultchain-Qt.app
 
 # Unit-tests
 Makefile.test
-pivx-qt_test
+adultchain-qt_test
 src/test/buildenv.py
 
 # Resources cpp
@@ -105,7 +103,7 @@ build
 #lcov
 *.gcno
 /*.info
-test_pivx.coverage/
+test_adultchain.coverage/
 total.coverage/
 coverage_percent.txt
 
@@ -128,3 +126,71 @@ qa/pull-tester/test.*/*
 .idea
 CMakeLists.txt
 cmake-build-debug
+config.log
+config.status
+/.vs/smrtc/v15/Browse.VC.db
+/.vs/smrtc/v15/Browse.VC.opendb
+/.vs/ProjectSettings.json
+/.vs/slnx.sqlite
+/.vs/smrtc/v15/.suo
+/.vs/VSWorkspaceState.json
+.vs/smrtc/v15/ipch/AutoPCH/265c25126fc6063c/GUIUTIL.ipch
+.vs/smrtc/v15/ipch/AutoPCH/3fc496d53ea39c11/BLOCKEXPLORER.ipch
+.vs/smrtc/v15/ipch/AutoPCH/5296bec56a7191ec/MASTERNODEMAN.ipch
+.vs/smrtc/v15/ipch/AutoPCH/6883191c1916ca26/AMOUNT.ipch
+.vs/smrtc/v15/ipch/AutoPCH/8d46eca7c6902300/INIT.ipch
+.vs/ADD/v15/.suo
+.vs/ADD/v15/Browse.VC.db
+.vs/ADD/v15/Browse.VC.opendb
+.vs/ADD/v15/ipch/AutoPCH/9a0c471bdb4f68f4/BITCOINGUI.ipch
+.vs/ADD/v15/ipch/AutoPCH/1d92aff8c171a719/PARAMGENERATION.ipch
+.vs/ADD/v15/ipch/AutoPCH/41c8d4b10f5772ab/PARAMGEN.ipch
+.vs/slnx.sqlite-journal
+.vs/ADD/v15/ipch/AutoPCH/7a053cc9182e9c0c/GUIUTIL.ipch
+.vs/ADD/v15/ipch/AutoPCH/7b7311dfb0c553fa/TRANSACTIONRECORD.ipch
+.vs/ADD/v15/ipch/AutoPCH/d6fbcfae9fa9feb4/PAYMENTSERVER.ipch
+.vs/ADD/v15/ipch/AutoPCH/aee126f7c87e321c/MASTERNODEMAN.ipch
+.vs/ADD/v15/ipch/AutoPCH/40dadb20cea31fa0/BITCOINCONSENSUS.ipch
+.vs/ADD/v15/ipch/AutoPCH/713ff23d09b32455/RPCDUMP.ipch
+.vs/ADD/v15/ipch/AutoPCH/78d5b3ed1536249e/BITCOINGUI.ipch
+.vs/ADD/v15/ipch/AutoPCH/cf13db34be1232da/INIT.ipch
+.vs/ADD/v15/ipch/AutoPCH/fb4db16ec65083b9/OVERVIEWPAGE.ipch
+.vs/config/applicationhost.config
+.vs/ADD/v15/ipch/AutoPCH/3e4badd4568fd837/NET.ipch
+.vs/ADD/v15/ipch/AutoPCH/afae31017abe89a9/CLIENTVERSION.ipch
+.vs/ADD/v15/ipch/AutoPCH/61ec4997d723899f/PRIVACYDIALOG.ipch
+.vs/ADD/v15/ipch/AutoPCH/ca6d783b7809f7b3/CLIENTVERSION.ipch
+.vs/ADD/v15/ipch/AutoPCH/cea00ee08fcf5234/BITCOINGUI.ipch
+.vs/ADD/v15/ipch/AutoPCH/39e800a96980bfb0/TRANSACTIONRECORD.ipch
+.vs/ADD/v15/ipch/AutoPCH/5c45b18c2677adbd/RPCBLOCKCHAIN.ipch
+.vs/ADD/v15/ipch/AutoPCH/63b13b8b930a30d5/RPCMASTERNODE.ipch
+.vs/ADD/v15/ipch/AutoPCH/7b8ccf850bb7f73/RPCMINING.ipch
+.vs/ADD/v15/ipch/AutoPCH/86eb00b0a74bffc8/LOG_TEST.ipch
+.vs/ADD/v15/ipch/AutoPCH/9fbaf3cb299d0de7/ISSUE178_TEST.ipch
+.vs/ADD/v15/ipch/AutoPCH/a1ae22289450acd8/SCRYPT.ipch
+.vs/ADD/v15/ipch/AutoPCH/bac51a75c75f068e/RPCNET.ipch
+.vs/ADD/v15/ipch/AutoPCH/c333b2e447d7c3f9/ZEROCOIN_TRANSACTIONS_TESTS.ipch
+.vs/ADD/v15/ipch/AutoPCH/f4151df30ccf8e05/RPCMASTERNODE-BUDGET.ipch
+.vs/ADD/v15/ipch/AutoPCH/fe1d8ef7e9f1e872/BIP32_TESTS.ipch
+.vs/ADD/v15/ipch/AutoPCH/9aee69b83316a60c/DETERMINISTICMINT.ipch
+.vs/AdNode/v15/ipch/AutoPCH/aa6c60caa9a426ae/BITCOINGUI.ipch
+.vs/AdNode/v15/Browse.VC.opendb
+.vs/AdNode/v15/Browse.VC.db
+.vs/AdNode/v15/.suo
+.vs/AdNode/v15/ipch/AutoPCH/9ef3c343cc88afc7/HISTOGRAM.ipch
+.vs/AdNode/v15/ipch/AutoPCH/6df43f3782833b4a/BITCOINGUI.ipch
+.vs/AdNode/v15/ipch/AutoPCH/855dd1b9b31a45aa/POW.ipch
+.vs/AdNode/v15/ipch/AutoPCH/cc6cf4356730edec/BITCOINGUI.ipch
+.vs/AdNode/v15/ipch/AutoPCH/d999a94e278cb200/SHABAL.ipch
+.vs/AdNode/v15/ipch/AutoPCH/b74ef50e32fc9c01/CLIENTVERSION.ipch
+.vs/AdNode/v15/ipch/AutoPCH/baaaeb31c27126fb/BITCOINGUI.ipch
+.vs/AdNode/v15/ipch/AutoPCH/3700bc45530439f4/BLOCK.ipch
+.vs/AdNode/v15/ipch/AutoPCH/94aa293214e1e8e1/MERKLEBLOCK.ipch
+.vs/AdNode/v15/ipch/AutoPCH/9f92e089c84be1a5/SPORK.ipch
+.vs/AdNode/v15/ipch/AutoPCH/b998bb602eca7802/VERSION_SET.ipch
+.vs/AdNode/v15/ipch/AutoPCH/bfae865bacb27c02/ACCUMULATOR.ipch
+.vs/AdNode/v15/ipch/AutoPCH/f2f507f936d71abe/PROTOCOL.ipch
+.vs/AdNode/v15/ipch/AutoPCH/58f852c48e390823/CLIENTVERSION.ipch
+.vs/AdNode/v15/ipch/AutoPCH/a3559e7c0f12b064/VERSION_EDIT.ipch
+src/main.cpp
+src/main.cpp

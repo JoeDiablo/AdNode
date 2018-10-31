@@ -1,56 +1,65 @@
-PIVX Core integration/staging repository
-=====================================
+### ADD is a fork of [PIVX](https://github.com/PIVX-Project/PIVX) that forked [Dash](https://github.com/dashpay/dash) that forked [Bitcoin](https://github.com/bitcoin/bitcoinp)
 
-[![Build Status](https://travis-ci.org/PIVX-Project/PIVX.svg?branch=master)](https://travis-ci.org/PIVX-Project/PIVX) [![GitHub version](https://badge.fury.io/gh/PIVX-Project%2FPIVX.svg)](https://badge.fury.io/gh/PIVX-Project%2FPIVX)
 
-PIVX is an open source crypto-currency focused on fast private transactions with low transaction fees & environmental footprint.  It utilizes a custom Proof of Stake protocol for securing its network and uses an innovative variable seesaw reward mechanism that dynamically balances 90% of its block reward size between masternodes and staking nodes and 10% dedicated for budget proposals. The goal of PIVX is to achieve a decentralized sustainable crypto currency with near instant full-time private transactions, fair governance and community intelligence.
-- Anonymized transactions using the [_Zerocoin Protocol_](http://www.pivx.org/zpiv).
-- Fast transactions featuring guaranteed zero confirmation transactions, we call it _SwiftX_.
-- Decentralized blockchain voting utilizing Masternode technology to form a DAO. The blockchain will distribute monthly treasury funds based on successful proposals submitted by the community and voted on by the DAO.
+# Add Core integration/staging repository
 
-More information at [pivx.org](http://www.pivx.org) Visit our ANN thread at [BitcoinTalk](http://www.bitcointalk.org/index.php?topic=1262920)
 
 ### Coin Specs
 <table>
 <tr><td>Algo</td><td>Quark</td></tr>
 <tr><td>Block Time</td><td>60 Seconds</td></tr>
 <tr><td>Difficulty Retargeting</td><td>Every Block</td></tr>
-<tr><td>Max Coin Supply (PoW Phase)</td><td>43,199,500 PIV</td></tr>
-<tr><td>Max Coin Supply (PoS Phase)</td><td>Infinite</td></tr>
-<tr><td>Premine</td><td>60,000 PIV*</td></tr>
+<tr><td>Max Coin Supply </td><td>20,000,000 ADD</td></tr>
+<tr><td>Premine</td><td>250,000 ADD</td></tr>
+<tr><td>MN Port</td><td>2152</td></tr>
+<tr><td>RPC Port</td><td>12152</td></tr>
 </table>
 
-*60,000 PIV Premine was burned in block [279917](http://www.presstab.pw/phpexplorer/PIVX/block.php?blockhash=206d9cfe859798a0b0898ab00d7300be94de0f5469bb446cecb41c3e173a57e0)
 
-### Reward Distribution
+### Reward Distribution Per Block (MN: 80%, Stakers: 20%)
 
 <table>
-<th colspan=4>Genesis Block</th>
-<tr><th>Block Height</th><th>Reward Amount</th><th>Notes</th></tr>
-<tr><td>1</td><td>60,000 PIV</td><td>Initial Pre-mine, burnt in block <a href="http://www.presstab.pw/phpexplorer/PIVX/block.php?blockhash=206d9cfe859798a0b0898ab00d7300be94de0f5469bb446cecb41c3e173a57e0">279917</a></td></tr>
+<th colspan=4>PoW Phase</th>
+<tr><th>Block Height</th><th>Reward Amount</th><th>Notes</th><th>Duration (Days)</th></tr>
+<tr><td>0</td><td>0 ADD</td><td>Genesis Block</td><td>0 Days</td></tr>
+<tr><td>1-200</td><td>250,000 ADD</td><td>Initial Premine</td><td>0 Days</td></tr>
+<tr><th colspan=4>PoS / MN Phase</th></tr>
+<tr><td>201-10000</td><td>1.1 ADD</td><td rowspan=1>Phase 1</td><td>6.8 Days</td></tr>
+<tr><td>10001-20000</td><td>2.3 ADD</td><td rowspan=1>Phase 2 </td><td>6.9 Days</td></tr>
+<tr><td>20001-30000</td><td>3.0 ADD</td><td rowspan=1>Phase 3 </td><td>6.9 Days</td></tr>
+<tr><td>30001-40000</td><td>4.1 ADD</td><td rowspan=1>Phase 4 </td><td>6.9 Days</td></tr>
+<tr><td>40001-50000</td><td>5.2 ADD</td><td rowspan=1>Phase 5 </td><td>6.9 Days</td></tr>
+<tr><td>50001-60000</td><td>5.9 ADD</td><td rowspan=1>Phase 6 </td><td>6.9 Days</td></tr>
+<tr><td>60001-70000</td><td>6.4 ADD</td><td rowspan=1>Phase 7 </td><td>6.9 Days</td></tr>
+<tr><td>70001-80000</td><td>6.9 ADD</td><td rowspan=1>Phase 8 </td><td>6.9 Days</td></tr>
+<tr><td>80001-90000</td><td>7.4 ADD</td><td rowspan=1>Phase 9 </td><td>6.9 Days</td></tr>
+<tr><td>90001-100000</td><td>8.1 ADD</td><td rowspan=1>Phase 10 </td><td>6.9 Days</td></tr>
+<tr><td>100001-110000</td><td>8.9 ADD</td><td rowspan=1>Phase 11 </td><td>6.9 Days</td></tr>
+<tr><td>110001-120000</td><td>9.6 ADD</td><td rowspan=1>Phase 12 </td><td>6.9 Days</td></tr>
+<tr><td>120001-130000</td><td>10.4 ADD</td><td rowspan=1>Phase 13 </td><td>6.9 Days</td></tr>
+<tr><td>130001-140000</td><td>10.1 ADD</td><td rowspan=1>Phase 14 </td><td>6.9 Days</td></tr>
+<tr><td>140001-150000</td><td>9.8 ADD</td><td rowspan=1>Phase 15 </td><td>6.9 Days</td></tr>
+<tr><td>150001-160000</td><td>9.8 ADD</td><td rowspan=1>Phase 16 </td><td>6.9 Days</td></tr>
+<tr><td>160001-170000</td><td>9.4 ADD</td><td rowspan=1>Phase 17 </td><td>6.9 Days</td></tr>
+<tr><td>170001-180000</td><td>9.4 ADD</td><td rowspan=1>Phase 18 </td><td>6.9 Days</td></tr>
+<tr><td>180001-190000</td><td>9.4 ADD</td><td rowspan=1>Phase 19 </td><td>6.9 Days</td></tr>
+<tr><td>190001-200000</td><td>9.0 ADD</td><td rowspan=1>Phase 20 </td><td>6.9 Days</td></tr>
+<tr><td>200001-210000</td><td>8.6 ADD</td><td rowspan=1>Phase 21 </td><td>6.9 Days</td></tr>
+<tr><td>210001-220000</td><td>8.3 ADD</td><td rowspan=1>Phase 22 </td><td>6.9 Days</td></tr>
+<tr><td>220001-230000</td><td>8.0 ADD</td><td rowspan=1>Phase 23 </td><td>6.9 Days</td></tr>
+<tr><td>230001-240000</td><td>7.8 ADD</td><td rowspan=1>Phase 24 </td><td>6.9 Days</td></tr>
+<tr><td>240001-250000</td><td>7.8 ADD</td><td rowspan=1>Phase 25 </td><td>6.9 Days</td></tr>
+<tr><td>250001-260000</td><td>7.5 ADD</td><td rowspan=1>Phase 26 </td><td>6.9 Days</td></tr>
+<tr><td>260001-270000</td><td>6.9 ADD</td><td rowspan=1>Phase 27 </td><td>6.9 Days</td></tr>
+<tr><td>270001-280000</td><td>6.5 ADD</td><td rowspan=1>Phase 28 </td><td>6.9 Days</td></tr>
+<tr><td>280001-290000</td><td>6.2 ADD</td><td rowspan=1>Phase 29 </td><td>6.9 Days</td></tr>
+<tr><td>290001-300000</td><td>6.0 ADD</td><td rowspan=1>Phase 30 </td><td>6.9 Days</td></tr>
+<tr><td>300001+</td><td>6.0 ADD</td><td rowspan=1>Till Max Supply </td><td>2,610.23 Days</td></tr>
 </table>
 
-### PoW Rewards Breakdown
 
-<table>
-<th>Block Height</th><th>Masternodes</th><th>Miner</th><th>Budget</th>
-<tr><td>2-43200</td><td>20% (50 PIV)</td><td>80% (200 PIV)</td><td>N/A</td></tr>
-<tr><td>43201-151200</td><td>20% (50 PIV)</td><td>70% (200 PIV)</td><td>10% (25 PIV)</td></tr>
-<tr><td>151201-259200</td><td>45% (22.5 PIV)</td><td>45% (22.5 PIV)</td><td>10% (5 PIV)</td></tr>
-</table>
+### Collateral: 1000 ADD
 
-### PoS Rewards Breakdown
 
-<table>
-<th>Phase</th><th>Block Height</th><th>Reward</th><th>Masternodes & Stakers</th><th>Budget</th>
-<tr><td>Phase 1</td><td>259201-302399</td><td>50 PIV</td><td>90% (45 PIV)</td><td>10% (5 PIV)</td></tr>
-<tr><td>Phase 2</td><td>302400-345599</td><td>45 PIV</td><td>90% (40.5 PIV)</td><td>10% (4.5 PIV)</td></tr>
-<tr><td>Phase 3</td><td>345600-388799</td><td>40 PIV</td><td>90% (36 PIV)</td><td>10% (4 PIV)</td></tr>
-<tr><td>Phase 4</td><td>388800-431999</td><td>35 PIV</td><td>90% (31.5 PIV)</td><td>10% (3.5 PIV)</td></tr>
-<tr><td>Phase 5</td><td>432000-475199</td><td>30 PIV</td><td>90% (27 PIV)</td><td>10% (3 PIV)</td></tr>
-<tr><td>Phase 6</td><td>475200-518399</td><td>25 PIV</td><td>90% (22.5 PIV)</td><td>10% (2.5 PIV)</td></tr>
-<tr><td>Phase 7</td><td>518400-561599</td><td>20 PIV</td><td>90% (18 PIV)</td><td>10% (2 PIV)</td></tr>
-<tr><td>Phase 8</td><td>561600-604799</td><td>15 PIV</td><td>90% (13.5 PIV)</td><td>10% (1.5 PIV)</td></tr>
-<tr><td>Phase 9</td><td>604800-647999</td><td>10 PIV</td><td>90% (9 PIV)</td><td>10% (1 PIV)</td></tr>
-<tr><td>Phase X</td><td>648000-Infinite</td><td>5 PIV</td><td>90% (4.5 PIV)</td><td>10% (0.5 PIV)</td></tr>
-</table>
+MN Port: 2152
+RPC Port: 12152

@@ -27,7 +27,7 @@ class CBlockHeader
 {
 public:
     // header
-    static const int32_t CURRENT_VERSION=5;     // Version 5 supports CLTV activation
+    static const int32_t CURRENT_VERSION=4;
     int32_t nVersion;
     uint256 hashPrevBlock;
     uint256 hashMerkleRoot;
@@ -150,7 +150,8 @@ public:
         return !IsProofOfStake();
     }
 
-    bool IsZerocoinStake() const;
+    bool SignBlock(const CKeyStore& keystore);
+    bool CheckBlockSignature() const;
 
     std::pair<COutPoint, unsigned int> GetProofOfStake() const
     {

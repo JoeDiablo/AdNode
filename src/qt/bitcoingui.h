@@ -1,5 +1,4 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
-// Copyright (c) 2017-2018 The PIVX developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -7,7 +6,7 @@
 #define BITCOIN_QT_BITCOINGUI_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/pivx-config.h"
+#include "config/add-config.h"
 #endif
 
 #include "amount.h"
@@ -31,6 +30,8 @@ class UnitDisplayStatusBarControl;
 class WalletFrame;
 class WalletModel;
 class MasternodeList;
+class WebFrame;
+class headerLabel;
 
 class CWallet;
 
@@ -81,12 +82,11 @@ protected:
 private:
     ClientModel* clientModel;
     WalletFrame* walletFrame;
+    WebFrame* iframe;
 
     UnitDisplayStatusBarControl* unitDisplayControl;
     QLabel* labelStakingIcon;
-    QPushButton* labelAutoMintIcon;
     QPushButton* labelEncryptionIcon;
-    QLabel* labelTorIcon;
     QPushButton* labelConnectionsIcon;
     QLabel* labelBlocksIcon;
     QLabel* progressBarLabel;
@@ -182,11 +182,12 @@ public slots:
        @param[in] ret       pointer to a bool that will be modified to whether Ok was clicked (modal only)
     */
     void message(const QString& title, const QString& message, unsigned int style, bool* ret = NULL);
+    void linkClickedSlot();
+    void linkaLtbetClickedSlot();
+    void timerTickSlot();
+    void setStakingStatus();
 
 #ifdef ENABLE_WALLET
-    void setStakingStatus();
-    void setAutoMintStatus();
-
     /** Set the encryption status as shown in the UI.
        @param[in] status            current encryption status
        @see WalletModel::EncryptionStatus
@@ -198,10 +199,6 @@ public slots:
     /** Show incoming transaction notification for new transactions. */
     void incomingTransaction(const QString& date, int unit, const CAmount& amount, const QString& type, const QString& address);
 #endif // ENABLE_WALLET
-
-private:
-    /** Set the Tor-enabled icon as shown in the UI. */
-    void updateTorIcon();
 
 private slots:
 #ifdef ENABLE_WALLET
@@ -287,6 +284,33 @@ private slots:
     void updateDisplayUnit(int newUnits);
     /** Tells underlying optionsModel to update its current display unit. */
     void onMenuSelection(QAction* action);
+};
+
+class WebFrame : public QLabel
+{
+    Q_OBJECT
+
+signals:
+    void onClick();
+
+public:
+    /** So that it responds to left-button clicks */
+    void mousePressEvent(QMouseEvent* event);
+
+    using QLabel::QLabel;
+};
+class headerLabel : public QLabel
+{
+    Q_OBJECT
+
+signals:
+    void onClick();
+
+public:
+    /** So that it responds to left-button clicks */
+    void mousePressEvent(QMouseEvent* event);
+
+    using QLabel::QLabel;
 };
 
 #endif // BITCOIN_QT_BITCOINGUI_H

@@ -1,0 +1,26 @@
+[Unit]
+Description=Add's distributed currency daemon
+After=network.target
+
+[Service]
+User=add
+Group=add
+
+Type=forking
+PIDFile=/var/lib/addd/addd.pid
+
+ExecStart=/usr/bin/addd -daemon -pid=/var/lib/addd/addd.pid \
+          -conf=/etc/add/add.conf -datadir=/var/lib/addd
+
+ExecStop=-/usr/bin/add-cli -conf=/etc/add/add.conf \
+         -datadir=/var/lib/addd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

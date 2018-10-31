@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Add
+Comment=Add P2P Cryptocurrency
+Comment[fr]=Add, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Add, eşten eşe kriptografik sanal para birimi
+Exec=add-qt %u
+Terminal=false
+Type=Application
+Icon=add128
+MimeType=x-scheme-handler/add;
+Categories=Office;Finance;
