@@ -167,10 +167,10 @@ public:
 
 
         //Seeds	Community Nodes
-        vSeeds.push_back(CDNSSeedData("178.128.165.147", "178.128.165.147"));
-	vSeeds.push_back(CDNSSeedData("178.128.150.16", "178.128.150.16"));
-	vSeeds.push_back(CDNSSeedData("178.128.165.147", "178.128.165.147"));
-	vSeeds.push_back(CDNSSeedData("142.93.170.78", "142.93.170.78"));
+        vSeeds.push_back(CDNSSeedData("142.93.41.140", "142.93.41.140"));
+	vSeeds.push_back(CDNSSeedData("159.65.103.78", "159.65.103.78"));
+	vSeeds.push_back(CDNSSeedData("142.93.41.148", "142.93.41.148"));
+	vSeeds.push_back(CDNSSeedData("142.93.41.220", "142.93.41.220"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 23); //A
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 30); //D
