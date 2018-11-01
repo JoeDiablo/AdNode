@@ -639,7 +639,7 @@ void BitcoinGUI::timerTickSlot()
 
 void BitcoinGUI::linkaLtbetClickedSlot()
 {
-    QDesktopServices::openUrl(QUrl("https://adnode.io"));
+    QDesktopServices::openUrl(QUrl("http://adnodecoin.com"));
 }
 void BitcoinGUI::linkClickedSlot()
 {
