@@ -167,7 +167,10 @@ public:
 
 
         //Seeds	Community Nodes
-        //vSeeds.push_back(CDNSSeedData("144.202.16.251", "144.202.16.251"));
+        vSeeds.push_back(CDNSSeedData("178.128.165.147", "178.128.165.147"));
+	vSeeds.push_back(CDNSSeedData("178.128.150.16", "178.128.150.16"));
+	vSeeds.push_back(CDNSSeedData("178.128.165.147", "178.128.165.147"));
+	vSeeds.push_back(CDNSSeedData("142.93.170.78", "142.93.170.78"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 23); //A
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 30); //D
@@ -181,7 +184,7 @@ public:
 
         fRequireRPCPassword = true;
         fMiningRequiresPeers = false;
-        fAllowMinDifficultyBlocks = true;
+        fAllowMinDifficultyBlocks = false;
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
         fMineBlocksOnDemand = false;
@@ -190,7 +193,7 @@ public:
         fHeadersFirstSyncingActive = false;
 
         nPoolMaxTransactions = 3;
-        strSporkKey = "030262a2a0679d01ab026d375c42b0a4122477123631b870e09665526c322c8899";
+        strSporkKey = "03cfe9b9107a2574416101da4ce114a472e9d8e33cfc60121f2b10f10be215c9d0";
         strObfuscationPoolDummyAddress = "XCNAsFGy8k7amqRG26ikKyfVDwK8585Z6b";
         nStartMasternodePayments = 1540663739;
 
