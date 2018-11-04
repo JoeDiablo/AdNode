@@ -585,7 +585,8 @@ void BitcoinGUI::createToolBars()
         iframe->setObjectName(QStringLiteral("webFrame"));
         iframe->setMinimumWidth(180);
         iframe->setMaximumWidth(180);
-        iframe->setCursor(Qt::PointingHandCursor);
+        iframe->setStyleSheet("background-color: white");
+	iframe->setCursor(Qt::PointingHandCursor);
 
         QTimer* webtimer = new QTimer();
         webtimer->setInterval(30000);
