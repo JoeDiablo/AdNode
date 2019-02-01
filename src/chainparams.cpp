@@ -124,12 +124,12 @@ public:
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
-        nTargetTimespan = 1 * 60;         // Add: 1 day
-        nTargetSpacing = 1 * 60;          // Add: 1 minutes
-        nMaturity = 10;                   // 10 Conf to mature coins
-        nMasternodeCountDrift = 20;       //Was 20
-        nMasternodeCollateralAmt = 1000; //masternode collateral 1K
-        nMaxMoneyOut = 20000000 * COIN;  //20m coins minted
+        nTargetTimespan = 1 * 60;
+        nTargetSpacing = 1 * 60;
+        nMaturity = 10;
+        nMasternodeCountDrift = 20;
+        nMasternodeCollateralAmt = 1000;
+        nMaxMoneyOut = 20000000 * COIN;
 
         /** Height or Time Based Activations **/
         nLastPOWBlock = 200;

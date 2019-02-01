@@ -13,6 +13,7 @@
 #include "primitives/block.h"
 #include "protocol.h"
 #include "uint256.h"
+#include "amount.h"
 
 #include "libzerocoin/Params.h"
 #include <vector>
@@ -117,10 +118,8 @@ public:
     int Zerocoin_Block_LastGoodCheckpoint() const { return nBlockLastGoodCheckpoint; }
     int Zerocoin_StartTime() const { return nZerocoinStartTime; }
     int Zerocoin_AccumulatorStartHeight() const { return nAccumulatorStartHeight; }
-	//Central Collateral Amount
-	int MasternodeCollateralAmt() const { return nMasternodeCollateralAmt; }
-	//Treasury Code
-	std::string vTreasuryRewardAddress;
+    CAmount MasternodeCollateralAmt() const { return nMasternodeCollateralAmt; }
+    std::string vTreasuryRewardAddress;
     std::string vReviveRewardAddress;
     std::string GetTreasuryRewardAddressAtHeight(int height) const;
     CScript GetTreasuryRewardScriptAtHeight(int height) const;
@@ -135,7 +134,7 @@ protected:
     //! Raw pub key bytes for the broadcast alert signing key.
     std::vector<unsigned char> vAlertPubKey;
     int nDefaultPort;
-	int nMasternodeCollateralAmt;
+    CAmount nMasternodeCollateralAmt;
     uint256 bnProofOfWorkLimit;
     int nMaxReorganizationDepth;
     int nSubsidyHalvingInterval;
