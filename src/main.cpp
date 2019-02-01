@@ -2467,58 +2467,24 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
 		return ret;
 }
 
-//Treasury blocks start from 999999999 and then each block after
-int nStartTreasuryBlock = 999999999;
-int nTreasuryBlockStep = 999999999;
-//Checks to see if block count above is correct if not then no Treasury
 bool IsTreasuryBlock(int nHeight)
 {
-    if (nHeight < nStartTreasuryBlock)
-        return false;
-    else if ((nHeight - nStartTreasuryBlock) % nTreasuryBlockStep == 0)
-        return true;
-    else
-        return false;
+    return false;
 }
 
 int64_t GetTreasuryAward(int nHeight)
 {
-    if (IsTreasuryBlock(nHeight)) {
-        if (nHeight > 999999999) {
-			return 0 * COIN; 
-		}
-		else {
-			return 0;
-		}
-	}
-	else
-		return 0;
+    return 0;
 }
 
-//Revive blocks start from 999999999 and then each block after
-int nStartReviveBlock = 9999999991;
-int nReviveBlockStep = 9999999991;
-//Checks to see if block count above is correct if not then no Revive
 bool IsReviveBlock(int nHeight)
 {
-    if (nHeight < nStartReviveBlock)
-        return false;
-    else if ((nHeight - nStartReviveBlock) % nReviveBlockStep == 0)
-        return true;
-    else
-        return false;
+    return false;
 }
 
 int64_t GetReviveAward(int nHeight)
 {
-    if (IsReviveBlock(nHeight)) {
-        if (nHeight > 9999999991) {
-            return 0 * COIN; 
-        } else {
-            return 0;
-        }
-    } else
-        return 0;
+    return 0;
 }
 
 bool IsInitialBlockDownload()
