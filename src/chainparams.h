@@ -119,6 +119,7 @@ public:
     int Zerocoin_StartTime() const { return nZerocoinStartTime; }
     int Zerocoin_AccumulatorStartHeight() const { return nAccumulatorStartHeight; }
     CAmount MasternodeCollateralAmt() const { return nMasternodeCollateralAmt; }
+    CAmount MasternodeCollateralNew() const { return nMasternodeCollateralNew; }
     std::string vTreasuryRewardAddress;
     std::string vReviveRewardAddress;
     std::string GetTreasuryRewardAddressAtHeight(int height) const;
@@ -135,6 +136,7 @@ protected:
     std::vector<unsigned char> vAlertPubKey;
     int nDefaultPort;
     CAmount nMasternodeCollateralAmt;
+    CAmount nMasternodeCollateralNew;
     uint256 bnProofOfWorkLimit;
     int nMaxReorganizationDepth;
     int nSubsidyHalvingInterval;
